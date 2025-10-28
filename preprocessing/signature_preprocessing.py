@@ -39,7 +39,6 @@ class ImageProcessor:
             #cv2.destroyAllWindows()
 
             # Step 5: Crop the image to remove unnecessary white space
-            #img_cropped = utils.crop_signature(img_inverted)
             img_cropped = utils.crop_and_resize_signature(img_inverted)
             cv2.imshow('Cropped Signature', img_cropped)   
             # Wait until any key is pressed
