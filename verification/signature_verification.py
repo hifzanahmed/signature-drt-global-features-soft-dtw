@@ -1,8 +1,6 @@
-from utilities import Utilities
-from signature_feature_extraction import SignatureFeatureExtraction
+from utils.utilities import Utilities
+from features.signature_feature_extraction import SignatureFeatureExtraction
 import config
-import numpy as np
-import torch
 
 class SignatureVerificationTraining:
     def verifiy_test_signature_with_soft_dtw_without_gradient(test_image_path):

@@ -1,10 +1,10 @@
-from signature_training import SignatureTraining
-from signature_verification import SignatureVerificationTraining 
+from training.signature_training import SignatureTraining
+from verification.signature_verification import SignatureVerificationTraining
 
 def main():
-    location_of_training_signature = 'data/saba/'
+    location_of_training_signature = 'C:/Users/hifza/workspace/Signature Dataset/sa/'
     size_of_training_signature = 6
-    location_of_test_signature = 'data/saba /signature7.png'
+    location_of_test_signature = 'C:/Users/hifza/workspace/Signature Dataset/sa/signature7.png'
     # Training Phase
     s1 = SignatureTraining.training_genuine_with_soft_dtw_without_gradient(location_of_training_signature, size_of_training_signature) 
     print("S1 (Training Score):", s1) 

@@ -1,6 +1,5 @@
 import numpy as np
 import cv2
-from tslearn.metrics import dtw
 from tslearn.metrics import soft_dtw
 
 class Utilities:
