@@ -10,7 +10,7 @@ class SignatureTraining:
         print("Training on Genuine Signatures...")
         featureList = []  # define an empty list to hold features 
         for i in range(1, trainingSize + 1):
-            feature = SignatureFeatureExtraction.preprocess_and_feature_extraction_radon_transform_features(f'{location}/signature{i}.png')
+            feature = SignatureFeatureExtraction.preprocess_and_feature_extraction_radon_transform_features(f'{location}{i}.png')
             featureList.append(feature)  # append each feature to the list
         
         normalized = []

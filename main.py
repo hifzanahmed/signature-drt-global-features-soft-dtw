@@ -3,16 +3,17 @@ from verification.signature_verification import SignatureVerificationTraining
 import os
 
 def main():
-    location_of_training_signature = 'C:/Users/hifza/workspace/Signature Dataset/za/'
+    location_of_training_signature = 'C:/Users/hifza/workspace/Signature Dataset/signatures_1/original_1_'
     size_of_training_signature = 6
-    location_of_test_signature = 'C:/Users/hifza/workspace/Signature Dataset/za/forged'
+    location_of_test_signature = 'C:/Users/hifza/workspace/Signature Dataset/signatures_1/original_1_'
     # Training Phase
     s1 = SignatureTraining.training_genuine_with_soft_dtw_without_gradient(location_of_training_signature, size_of_training_signature)  
     # Verification Phase of input test signature 
     # Loop through sequentially named images: image1, image2, ...
     i = 1
     while True:
-        test_signature_path = os.path.join(location_of_test_signature, f"signature{i}.png")
+        test_signature = f"{location_of_test_signature}{i}.png"
+        test_signature_path = os.path.join(test_signature)
     
         # Stop if the image does not exist
         if not os.path.exists(test_signature_path):

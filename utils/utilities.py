@@ -1,6 +1,7 @@
 import numpy as np
 import cv2
 from tslearn.metrics import soft_dtw
+from skimage.transform import radon
 
 class Utilities:
     @staticmethod
@@ -55,10 +56,32 @@ class Utilities:
     
     @staticmethod
     def discrete_radon_transform(binary_img):
-        # 0° projection (horizontal features): sum along rows
-        horizontal_projection = np.sum(binary_img, axis=1)
-        # 90° projection (vertical features): sum along columns
-        vertical_projection = np.sum(binary_img, axis=0)
+        """
+        Compute discrete Radon transform (DRT) projections at 0° and 90°.
+
+        Parameters
+        ----------
+        binary_img : np.ndarray
+            Binary or grayscale 2D image.
+
+        Returns
+        -------
+        horizontal_projection : np.ndarray
+            Radon projection at 0°.
+        vertical_projection : np.ndarray
+            Radon projection at 90°.
+        """
+        # Define the angles for the transform
+        angles = [0, 90]
+        
+        # Compute the discrete Radon transform
+        sinogram = radon(binary_img, theta=angles, circle=False)
+
+        # sinogram[:, 0] corresponds to 0° projection,
+        # sinogram[:, 1] corresponds to 90° projection
+        horizontal_projection = sinogram[:, 0]
+        vertical_projection = sinogram[:, 1]
+
         return horizontal_projection, vertical_projection
     
     @staticmethod
