@@ -51,8 +51,7 @@ class Utilities:
     
     @staticmethod
     def horizontal_vertical_projection_discrete_radon_transform(binary_img):
-        horizontal_proj, vertical_proj = Utilities.discrete_radon_transform(binary_img)
-        return np.concatenate((horizontal_proj, vertical_proj))
+        return Utilities.discrete_radon_transform(binary_img)
     
     @staticmethod
     def discrete_radon_transform(binary_img):
@@ -72,17 +71,22 @@ class Utilities:
             Radon projection at 90°.
         """
         # Define the angles for the transform
-        angles = [0, 90]
+        angles = [0, 45, 90, 135]
         
         # Compute the discrete Radon transform
         sinogram = radon(binary_img, theta=angles, circle=False)
 
         # sinogram[:, 0] corresponds to 0° projection,
         # sinogram[:, 1] corresponds to 90° projection
-        horizontal_projection = sinogram[:, 0]
-        vertical_projection = sinogram[:, 1]
+        #horizontal_projection = sinogram[:, 0]
+        #vertical_projection = sinogram[:, 1]
 
-        return horizontal_projection, vertical_projection
+        # Create dictionary of projections
+        #return horizontal_projection, vertical_projection
+        # Concatenate all projections into a single feature vector
+        feature_vector = np.concatenate([sinogram[:, i] for i in range(len(angles))])
+
+        return feature_vector
     
     @staticmethod
     def compute_training_score(signatures):
