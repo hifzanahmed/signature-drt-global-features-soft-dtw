@@ -3,9 +3,9 @@ from verification.signature_verification import SignatureVerificationTraining
 import os
 
 def main():
-    location_of_training_signature = 'C:/Users/hifza/workspace/Signature Dataset/signatures_27/original_27_'
+    location_of_training_signature = 'C:/Users/hifza/workspace/Signature Dataset/signatures_42/original_42_'
     size_of_training_signature = 6
-    location_of_test_signature = 'C:/Users/hifza/workspace/Signature Dataset/signatures_27/original_27_'
+    location_of_test_signature = 'C:/Users/hifza/workspace/Signature Dataset/signatures_42/original_42_'
     # Training Phase
     s1 = SignatureTraining.training_genuine_with_soft_dtw_without_gradient(location_of_training_signature, size_of_training_signature)  
     # Verification Phase of input test signature 
