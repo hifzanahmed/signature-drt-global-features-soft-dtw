@@ -5,7 +5,7 @@ import os
 def main():
     location_of_training_signature = 'C:/Users/hifza/workspace/Signature Dataset/signatures_4/original_4_'
     size_of_training_signature = 6
-    location_of_test_signature = 'C:/Users/hifza/workspace/Signature Dataset/signatures_4/original_4_'
+    location_of_test_signature = 'C:/Users/hifza/workspace/Signature Dataset/signatures_4/forgeries_4_'
     # Training Phase
     s1 = SignatureTraining.training_genuine_with_soft_dtw_without_gradient(location_of_training_signature, size_of_training_signature)  
     # Verification Phase of input test signature and Loop through sequentially named images: image1, image2, ...
@@ -20,11 +20,11 @@ def main():
         s2 = SignatureVerificationTraining.verifiy_test_signature_with_soft_dtw_without_gradient(test_signature_path)
         # Decision Making: calculating the score and comparing it with a threshold value
         i += 1
-        score_ratio = abs(s2) / abs(s1)
-        if score_ratio > 1:  
-            print(f"{score_ratio:.4f};Genuine")
+        score = abs(s1) / abs(s2)
+        if score < 1:  
+            print(f"{score:.4f};Genuine")
         else:
-            print(f"{score_ratio:.4f};Forged")
+            print(f"{score:.4f};Forged")
 
 if __name__ == "__main__":
     main()
