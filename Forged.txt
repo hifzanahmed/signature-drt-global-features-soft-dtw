@@ -19,6 +19,28 @@ Daddy - Paper
 1.0085;Forged
 
 Sanket - Digital
+1.0354;Forged
+1.0172;Forged
+1.0267;Forged
+1.0748;Forged
+1.0281;Forged
+1.0156;Forged
+1.0163;Forged
+1.0523;Forged
+1.0392;Forged
+1.0533;Forged
+1.0389;Forged
+1.0458;Forged
+1.0160;Forged
+1.0232;Forged
+1.0282;Forged
+1.0170;Forged
+1.0195;Forged
+1.0398;Forged
+1.0510;Forged
+1.0252;Forged
+1.0248;Forged
+1.0311;Forged
 
 Praveen - Digital
 1.0068;Forged
@@ -75,7 +97,64 @@ Zayn - Digital
 1.0468;Forged
 
 Saba - Digital
+1.0047;Forged
+1.0077;Forged
+1.0154;Forged
+1.0218;Forged
+1.0017;Forged
+0.9954;Genuine
+1.0031;Forged
+1.0128;Forged
+0.9952;Genuine
+1.0011;Forged
+0.9971;Genuine
+1.0076;Forged
+0.9966;Genuine
+1.0106;Forged
+1.0031;Forged
+1.0038;Forged
+1.0011;Forged
+1.0030;Forged
+1.0004;Forged
+1.0055;Forged
 
 Sunanda - Digital
+1.0664;Forged
+1.0567;Forged
+1.0397;Forged
+1.0291;Forged
+1.0460;Forged
+1.0207;Forged
+1.0253;Forged
+1.0304;Forged
+1.0305;Forged
+1.0531;Forged
+1.0464;Forged
+1.0574;Forged
+1.0644;Forged
+1.0217;Forged
+1.0407;Forged
+1.0421;Forged
+1.0278;Forged
+1.0379;Forged
+1.0221;Forged
+1.0497;Forged
+1.0820;Forged
+1.0880;Forged
 
 Dada - Paper
+1.0308;Forged
+1.0148;Forged
+1.0149;Forged
+1.0125;Forged
+1.0146;Forged
+1.0127;Forged
+1.0175;Forged
+1.0127;Forged
+1.0419;Forged
+1.0080;Forged
+1.0261;Forged
+1.0264;Forged
+1.0167;Forged
+1.0108;Forged
+1.0556;Forged
